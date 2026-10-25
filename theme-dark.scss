@@ -65,3 +65,12 @@ table thead th {
 .callout-note {
   border-left-color: $mpc-blue-light !important;
 }
+
+// "Explained" term boxes and other notes in lessons (markdown blockquotes).
+blockquote {
+  border-left: 4px solid $mpc-blue-light;
+  background-color: #0b1a2c;
+  padding: 0.75rem 1rem;
+  color: $body-color;
+  font-size: 1rem;
+}

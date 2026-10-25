@@ -33,3 +33,13 @@ table thead th {
 .callout-note {
   border-left-color: $mpc-blue !important;
 }
+
+// "Explained" term boxes and other notes in lessons are markdown blockquotes,
+// which also render on Kaggle and Colab. On the website they get the MPC colours.
+blockquote {
+  border-left: 4px solid $mpc-blue;
+  background-color: #eef3f9;
+  padding: 0.75rem 1rem;
+  color: $body-color;
+  font-size: 1rem;
+}
