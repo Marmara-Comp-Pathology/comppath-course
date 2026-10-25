@@ -110,7 +110,9 @@ website:
 
 format:
   html:
-    theme: [cosmo, theme.scss]   # white and MPC blue (#093c71); no dark mode
+    theme:
+      light: [cosmo, theme.scss]        # white and MPC blue (#093c71)
+      dark: [darkly, theme-dark.scss]   # black and MPC blue
     css: styles.css
     toc: true
     code-copy: true

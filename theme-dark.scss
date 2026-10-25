@@ -1,0 +1,39 @@
+/*-- scss:defaults --*/
+// Dark mode: black and MPC blue. #093c71 is too dark to read as text on black (contrast 1.9:1),
+// so it is used for solid areas, and a lighter tint of the same blue (9:1) for headings and links.
+$mpc-blue: #093c71;
+$mpc-blue-light: #7aaee0;
+
+$body-bg: #000000;
+$body-color: #e6e6e6;
+$primary: $mpc-blue-light;
+$link-color: $mpc-blue-light;
+$headings-color: $mpc-blue-light;
+
+$navbar-bg: $mpc-blue;
+$navbar-fg: #ffffff;
+$navbar-hl: #ffffff;
+$footer-bg: #000000;
+$footer-fg: $mpc-blue-light;
+
+/*-- scss:rules --*/
+.title,
+.quarto-title .subtitle {
+  color: $mpc-blue-light;
+}
+
+.sidebar-item-text.active,
+.sidebar nav[role="doc-toc"] ul > li > a.active {
+  color: $mpc-blue-light;
+  font-weight: 600;
+}
+
+table thead th {
+  color: #ffffff;
+  background-color: $mpc-blue;
+  border-bottom-color: $mpc-blue;
+}
+
+.callout-note {
+  border-left-color: $mpc-blue-light !important;
+}
