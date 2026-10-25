@@ -11,3 +11,18 @@ img[src*="img.youtube.com"] {
   max-width: 480px;
   width: 100%;
 }
+
+/* Embedded lesson videos: full width up to 720px, keeping the 16:9 shape on phones. */
+iframe[src*="youtube-nocookie.com/embed/"] {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+/* Video cells (tagged keep-output) already show the player on the website,
+   so hide their "run this cell" code here. On Kaggle and Colab the code stays visible. */
+.cell[data-tags*="keep-output"] .cell-code {
+  display: none;
+}

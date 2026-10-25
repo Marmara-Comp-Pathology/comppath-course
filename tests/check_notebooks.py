@@ -2,8 +2,12 @@
 
     python tests/check_notebooks.py          # check
     python tests/check_notebooks.py --fix    # also clear notebook outputs in place
+
+Outputs must be cleared, with one exception: a video cell tagged `keep-output` keeps its
+saved YouTube player, so the website (which never runs code) can show the video.
 """
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -14,6 +18,9 @@ SETUP_MARKER = "# COMPPATH-SETUP"
 HOMEWORK_HEADING = "## Now try it yourself"
 SLIDE_EXTENSIONS = {".svs", ".ndpi", ".mrxs", ".scn", ".vms", ".vmu", ".bif", ".czi", ".isyntax", ".dcm"}
 MAX_FILE_MB = 5
+KEEP_OUTPUT_TAG = "keep-output"
+VIDEO_PLAYER = re.compile(r'^\s*<iframe\s+width="\d+"\s+height="\d+"\s+src="https://www\.youtube-nocookie\.com/embed/[\w-]+"'
+                          r'\s+frameborder="0"\s+allowfullscreen\s*></iframe>\s*$')
 
 
 def source(cell):
@@ -21,13 +28,27 @@ def source(cell):
     return "".join(text) if isinstance(text, list) else text
 
 
+def keeps_output(cell):
+    return KEEP_OUTPUT_TAG in cell.get("metadata", {}).get("tags", [])
+
+
+def is_video_player(output):
+    """True for the saved output of IFrame("https://www.youtube-nocookie.com/embed/...") and nothing else."""
+    data = output.get("data", {})
+    html = data.get("text/html", "")
+    html = "".join(html) if isinstance(html, list) else html
+    return (output.get("output_type") == "display_data" and set(data) <= {"text/html", "text/plain"}
+            and bool(VIDEO_PLAYER.match(html)))
+
+
 def clear_outputs(nb):
     changed = False
     for cell in nb["cells"]:
         if cell["cell_type"] == "code":
-            if cell.get("outputs") or cell.get("execution_count") is not None:
+            kept = [o for o in cell.get("outputs", []) if keeps_output(cell) and is_video_player(o)]
+            if cell.get("outputs", []) != kept or cell.get("execution_count") is not None:
                 changed = True
-            cell["outputs"] = []
+            cell["outputs"] = kept
             cell["execution_count"] = None
     if "widgets" in nb.get("metadata", {}):
         del nb["metadata"]["widgets"]
@@ -48,11 +69,15 @@ def check_notebook(path, fix):
         path.write_text(json.dumps(nb, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
         print(f"cleared outputs: {path.relative_to(ROOT)}")
     for i, cell in enumerate(nb["cells"]):
-        if cell["cell_type"] == "code" and (cell.get("outputs") or cell.get("execution_count") is not None):
+        if cell["cell_type"] != "code":
+            continue
+        allowed = keeps_output(cell) and all(is_video_player(o) for o in cell.get("outputs", []))
+        if (cell.get("outputs") and not allowed) or cell.get("execution_count") is not None:
             errors.append(f"cell {i} has outputs; run with --fix to clear them")
             break
 
-    code_cells = [c for c in nb["cells"] if c["cell_type"] == "code"]
+    # Video cells may come before the setup cell; they need nothing installed.
+    code_cells = [c for c in nb["cells"] if c["cell_type"] == "code" and not keeps_output(c)]
     if not code_cells or not source(code_cells[0]).startswith(SETUP_MARKER):
         errors.append(f"first code cell must start with '{SETUP_MARKER}'")
 
