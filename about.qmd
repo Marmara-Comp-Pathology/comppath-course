@@ -3,7 +3,7 @@ title: "About"
 ---
 
 This course is made by the **Marmara Pathology Community (MPC)**, a group of pathologists who volunteer their time to teach
-computational pathology to residents. Anyone, anywhere, is welcome to use it.
+computational pathology to... who wants to. Anyone, anywhere, is welcome to use it.
 
 ## Disclaimer
 
@@ -32,4 +32,4 @@ Corrections, new examples and translations are welcome. See `CONTRIBUTING.md` in
 ## Acknowledgements
 
 The teaching approach follows fast.ai's [Practical Deep Learning for Coders](https://course.fast.ai) by Jeremy Howard and Rachel Thomas.
-Lessons link public videos by their original authors; the course does not host recorded talks of its own.
+Lessons link public videos by their original authors.
