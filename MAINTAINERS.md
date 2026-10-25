@@ -34,7 +34,7 @@ pip install -r environment.txt
 python tests/check_notebooks.py          # static checks (seconds)
 python tests/check_notebooks.py --fix    # clear outputs before committing
 python tests/run_notebooks.py            # run all lessons on tiny synthetic data (minutes)
-quarto preview                           # preview the website (needs Quarto: https://quarto.org)
+quarto preview                           # preview the website (pip install quarto-cli, or https://quarto.org)
 ```
 
 ## How the pieces fit

@@ -34,3 +34,5 @@ test-report.md
 
 # Local project notes for Claude Code sessions; kept out of the public repository
 CLAUDE.md
+
+**/*.quarto_ipynb

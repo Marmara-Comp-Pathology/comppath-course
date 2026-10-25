@@ -1,5 +1,5 @@
 /*-- scss:defaults --*/
-// Dark mode: black and MPC blue. #093c71 is too dark to read as text on black (contrast 1.9:1),
+// Dark mode: black and MPC blue, on the same base theme as light mode. #093c71 is too dark to read as text on black (contrast 1.9:1),
 // so it is used for solid areas, and a lighter tint of the same blue (9:1) for headings and links.
 $mpc-blue: #093c71;
 $mpc-blue-light: #7aaee0;
@@ -15,6 +15,34 @@ $navbar-fg: #ffffff;
 $navbar-hl: #ffffff;
 $footer-bg: #000000;
 $footer-fg: $mpc-blue-light;
+
+// Dark mode is built on the same base theme as light mode (cosmo), so fonts, sizes and spacing
+// are identical and only the colours change. These are the colours cosmo would otherwise keep light.
+$text-muted: #a6a6a6;
+$border-color: #2b2b2b;
+$hr-border-color: #2b2b2b;
+$table-color: $body-color;
+$table-border-color: #2b2b2b;
+$table-striped-bg: #0d0d0d;
+$code-color: #f0a6c4;
+$code-bg: #111111;
+$code-block-bg: #111111;
+$code-block-border-color: #2b2b2b;
+$pre-color: $body-color;
+$input-bg: #111111;
+$input-color: $body-color;
+$input-border-color: #2b2b2b;
+$card-bg: #0d0d0d;
+$card-border-color: #2b2b2b;
+$dropdown-bg: #111111;
+$dropdown-color: $body-color;
+$dropdown-link-color: $body-color;
+$dropdown-link-hover-bg: $mpc-blue;
+$dropdown-link-hover-color: #ffffff;
+$sidebar-fg: #bfbfbf;
+$sidebar-hl: $mpc-blue-light;
+$toc-color: $mpc-blue-light;
+$callout-color-note: $mpc-blue-light;
 
 /*-- scss:rules --*/
 .title,

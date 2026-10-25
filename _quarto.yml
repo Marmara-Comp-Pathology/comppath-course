@@ -112,7 +112,7 @@ format:
   html:
     theme:
       light: [cosmo, theme.scss]        # white and MPC blue (#093c71)
-      dark: [darkly, theme-dark.scss]   # black and MPC blue
+      dark: [cosmo, theme-dark.scss]    # black and MPC blue (same base theme, so sizes match)
     css: styles.css
     toc: true
     code-copy: true
