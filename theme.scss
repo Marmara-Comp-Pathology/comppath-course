@@ -1,0 +1,35 @@
+/*-- scss:defaults --*/
+// Course colours: white and MPC blue.
+$mpc-blue: #093c71;
+
+$primary: $mpc-blue;
+$link-color: $mpc-blue;
+$headings-color: $mpc-blue;
+$body-bg: #ffffff;
+
+$navbar-bg: $mpc-blue;
+$navbar-fg: #ffffff;
+$navbar-hl: #ffffff;
+$footer-bg: #ffffff;
+$footer-fg: $mpc-blue;
+
+/*-- scss:rules --*/
+.title,
+.quarto-title .subtitle {
+  color: $mpc-blue;
+}
+
+.sidebar-item-text.active,
+.sidebar nav[role="doc-toc"] ul > li > a.active {
+  color: $mpc-blue;
+  font-weight: 600;
+}
+
+table thead th {
+  color: $mpc-blue;
+  border-bottom-color: $mpc-blue;
+}
+
+.callout-note {
+  border-left-color: $mpc-blue !important;
+}
