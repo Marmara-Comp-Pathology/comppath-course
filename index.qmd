@@ -4,30 +4,26 @@ subtitle: "From Zero to Hero"
 toc: false
 ---
 
-A free, open course for pathology residents. No coding experience needed.
+A free, open course for pathologists. No coding experience needed.
 
 
 You will train your first deep learning model on histology in **lesson 1**, before learning any code.
 Each later lesson opens one of the boxes you used without explanation, until you can run a project of your own
-on your department's slides and present it at a congress.
-
-The course is inspired by fast.ai's [Practical Deep Learning for Coders](https://course.fast.ai):
-**whole game first, code before theory, and notebooks as the textbook.**
+on your department's slides and present it anywhere you want.
 
 ## Who it is for
 
-- Pathology residents (and pathologists) with **no coding background**
-- About **4 to 6 hours a week**: roughly two weeks per lesson for lessons 1 to 10, then a few months for the capstone
+- Pathologists with **no coding background**
+- About **4 to 6 hours a week**: roughly two weeks per lesson for lessons 1 to 10, then little bit more for the capstone
 - Everything runs in your web browser on free cloud GPUs. You do not need to install anything.
 
 ## How it works
 
 1. Read a lesson here, or open it directly on **Kaggle** (recommended) or **Google Colab** with the badges at the top of each lesson.
 2. Run the notebook cell by cell. Explanations sit between the code.
-3. Do the homework: *now do it on your own data*.
-4. Share your notebook publicly. Over the course it becomes your portfolio.
-5. Check yourself against the lesson's **checkpoint**. Lessons 5, 9 and 11 are formal checkpoints assessed by a supervisor:
-   you move on when you are ready, not when the calendar says so.
+3. Do the homework.
+4. Share your notebook publicly if you want.
+5. Check yourself against the lesson's **checkpoint**. You move on when you are ready, not when the calendar says so.
 
 New here? Start with [Getting started](getting-started.qmd).
 
@@ -49,6 +45,6 @@ An independent, volunteer project of the Marmara Pathology Community, an informa
 | 8 | [Foundation models](lessons/08-foundation-models/lesson.ipynb) 🚧 | Feature extraction with UNI, CONCH or similar |
 | 9 | [Slide-level prediction](lessons/09-slide-level-prediction/lesson.ipynb) 🚧 | Multiple instance learning for Gleason/ISUP grading on PANDA. ✅ **Checkpoint** |
 | 10 | [Trust](lessons/10-trust/lesson.ipynb) 🚧 | Validation, bias, explainability, regulation, data governance |
-| 11 | [Capstone](lessons/11-capstone/lesson.ipynb) 🚧 | Your own project on anonymized departmental slides, ending in a congress abstract. ✅ **Final checkpoint** |
+| 11 | [Capstone](lessons/11-capstone/lesson.ipynb) 🚧 | Your own project on anonymized departmental slides, ending in a congress abstract (maybe). ✅ **Final checkpoint** |
 
 🚧 = under construction.
