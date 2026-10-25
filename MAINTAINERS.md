@@ -1,6 +1,6 @@
 # Maintainers' guide
 
-How to keep the course running, tested and released for years. If you are taking over the course, start here.
+How to keep the course running, tested and released. If you are taking over the course, start here.
 
 ## Principles
 
@@ -9,19 +9,16 @@ How to keep the course running, tested and released for years. If you are taking
 - **Replaceable windows:** the website (GitHub Pages), the run platforms (Kaggle, Colab) and the data mirrors
   (Kaggle Datasets, Hugging Face) can all change. Zenodo holds the permanent copy of every release and dataset.
 
-## First-time setup (once)
+## First-time setup
 
 1. Create the GitHub organization and move or create the repository there.
-2. (Done for Marmara-Comp-Pathology.) If the repository ever moves, update every link and commit:
+2. If the repository ever moves, update every link and commit:
    ```bash
    python tools/set_org.py <org-name> [<repo-name>]
    ```
 3. **Settings → Pages → Build and deployment → Source: GitHub Actions.** The **Publish website** workflow then deploys on every push to `main`.
-4. Nothing to change under **Settings → Actions → General → Workflow permissions**: each workflow asks for the permissions it needs
-   (the monthly test asks for `issues: write` so it can open an issue when it fails). Leave the default at "Read repository contents".
-5. Log in to [Zenodo](https://zenodo.org) with GitHub, and switch the repository on under **GitHub** in your Zenodo account.
+4. Log in to [Zenodo](https://zenodo.org) with GitHub, and switch the repository on under **GitHub** in your Zenodo account.
    Every GitHub release is then archived with its own DOI.
-6. Optional: a custom domain under **Settings → Pages**, and update `site-url` in `_quarto.yml`.
 
 ## Working locally
 
@@ -50,8 +47,7 @@ quarto preview                           # preview the website (pip install quar
 | Notebook tests | `tests/run_notebooks.py`, `.github/workflows/test-notebooks.yml` | Monthly, on demand, and on pull requests that touch lessons. |
 
 **Why PyTorch is not pinned inside notebooks.** Kaggle and Colab ship CUDA builds of PyTorch matched to their GPUs and drivers.
-Reinstalling it costs minutes and often breaks the GPU. Notebooks therefore use the platform's PyTorch and pin the libraries on top
-(fastai and friends). `environment.txt` pins PyTorch for CI and local runs, and records the versions the lessons were last tested with.
+Reinstalling it costs minutes and often breaks the GPU. Notebooks therefore use the platform's PyTorch and pin the libraries on top. `environment.txt` pins PyTorch for CI and local runs, and records the versions the lessons were last tested with.
 
 **Smoke-test mode.** With `COMPPATH_SMOKE_TEST=1`, each lesson replaces its real data with a tiny synthetic set and uses the smallest settings,
 so CI can run it on a CPU in minutes. This catches broken imports, changed APIs and typos. It does **not** check that a model learns well:
@@ -72,8 +68,7 @@ The workflow opens an issue labelled `notebook-test-failure` (or comments on the
 
 ## Platform changes
 
-Kaggle's free tier (at the time of writing: about 30 GPU hours a week, 12-hour sessions, about 20 GB writable disk in `/kaggle/working`,
-about 200 GB of private datasets) can change. Check it before each cohort. If Kaggle becomes unusable, the Colab badge is the fallback:
+Kaggle's free tier can change. Check it before each cohort. If Kaggle becomes unusable, the Colab badge is the fallback:
 every lesson must keep working there too. Update `getting-started.qmd` with any change learners will notice.
 
 ## Data
@@ -83,7 +78,7 @@ every lesson must keep working there too. Update `getting-started.qmd` with any 
 - Record each dataset, its licence and its DOI in `data/README.md` and in the lesson's credits.
 - Never commit data to the repository. Departmental data follows the rules in `CONTRIBUTING.md` ("Privacy") and `data/README.md`.
 
-## Yearly release (before each cohort)
+## Yearly release
 
 1. **Update versions.** Move `environment.txt` and the setup cells to current versions, and check that the Python version used in CI
    matches roughly what Kaggle and Colab run.
