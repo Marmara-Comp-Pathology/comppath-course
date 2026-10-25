@@ -8,11 +8,10 @@
 | Copy | Role |
 |---|---|
 | **Zenodo** | Long-term master copy. Every curated subset gets a permanent DOI. |
-| **Kaggle Datasets** | Convenience mirror that lessons attach on Kaggle (read-only, does not count against the 20 GB working disk). |
+| **Kaggle Datasets** | Convenience mirror that lessons attach on Kaggle. |
 | **Hugging Face** | Second mirror, used by the Colab path. |
 
-Lessons download their own data in a notebook cell. The scripts here are for maintainers
-(building the curated subsets and mirrors) and for people running lessons on their own computer.
+Lessons download their own data in a notebook cell. The scripts here are for maintainers and for people running lessons on their own computer.
 
 ## Datasets by lesson
 
@@ -23,7 +22,7 @@ Lessons download their own data in a notebook cell. The scripts here are for mai
 Add a row for every new dataset, with its licence. Only use data whose licence allows redistribution
 of the subset you publish.
 
-## Departmental data (capstone)
+## Departmental data
 
 Departmental slides never go into this repository. Before any slide leaves the institution it must be:
 
