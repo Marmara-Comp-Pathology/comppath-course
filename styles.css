@@ -1,0 +1,13 @@
+/* Keep notebook badges on one line and reasonably sized. */
+img[alt="Open in Kaggle"],
+img[alt="Open in Colab"] {
+  display: inline;
+  height: 20px;
+  margin-right: 0.25rem;
+}
+
+/* Video thumbnails should not take over the page. */
+img[src*="img.youtube.com"] {
+  max-width: 480px;
+  width: 100%;
+}

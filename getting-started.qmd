@@ -1,0 +1,47 @@
+---
+title: "Getting started"
+---
+
+You need about 20 minutes and a phone for this, once.
+
+## 1. Create a Kaggle account
+
+[Kaggle](https://www.kaggle.com) gives everyone free GPU time in the browser. It is the main platform for this course.
+
+1. Sign up at [kaggle.com](https://www.kaggle.com).
+2. Go to **Settings → Phone verification** and verify your phone number.
+   Without this you cannot switch on a GPU or the internet in a notebook, and lessons will not work.
+3. Have a look at your weekly GPU quota (about 30 hours, shown in any notebook's right-hand panel). The lessons are designed to use only a small part of it.
+
+## 2. Open a lesson
+
+Every lesson starts with two badges:
+
+- **Open in Kaggle** makes your own copy of the lesson notebook on Kaggle. Use this one.
+- **Open in Colab** opens it on Google Colab instead. Use this if Kaggle is unavailable or its free tier changes.
+
+Each lesson tells you at the top whether it needs a GPU and which data to attach.
+
+## 3. Run a notebook
+
+A notebook is a page made of **cells**. Text cells explain; code cells do something.
+
+- Click inside a code cell and press **Shift+Enter** to run it. The next cell is selected automatically.
+- A running cell shows `[*]`; when it finishes, the star turns into a number.
+- Always run cells **from top to bottom**. Later cells use what earlier cells created.
+- If something gets stuck: **Run → Restart & clear outputs** (Kaggle) or **Runtime → Restart session** (Colab), then start again from the top.
+- Your copy is yours. You cannot break the course by changing it.
+
+## 4. Save and share
+
+On Kaggle, click **Save Version** to store your work with all outputs. Under **Share** you can make a notebook public.
+Every homework ends with sharing: publicly posted notebooks become your portfolio.
+
+## 5. Optional pre-work
+
+Lesson 3 teaches just enough Python to read the notebooks. If you like a head start, try the free
+[Kaggle Learn Python](https://www.kaggle.com/learn/python) micro-course. It is not needed for lessons 1 and 2.
+
+## Running on your own computer
+
+Possible, but not needed. See `MAINTAINERS.md` in the repository for the local setup used for testing.

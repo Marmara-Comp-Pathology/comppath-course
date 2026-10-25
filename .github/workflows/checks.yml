@@ -1,0 +1,20 @@
+# Fast static checks on every push and pull request: outputs cleared, setup cell, badges, no slides committed.
+name: Checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  notebooks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Check notebooks and repository
+        run: python tests/check_notebooks.py

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use or adapt this course, please cite it as below. Each yearly release has its own DOI on Zenodo."
+title: "Marmara Computational Pathology Starter Pack"
+type: software
+authors:
+  - name: "Marmara Pathology Community"
+repository-code: "https://github.com/Marmara-Comp-Pathology/comppath-course"
+url: "https://marmara-comp-pathology.github.io/comppath-course"
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - computational pathology
+  - digital pathology
+  - deep learning
+  - medical education
+  - residency training

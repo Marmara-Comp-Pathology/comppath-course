@@ -1,0 +1,42 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Marmara Pathology Community (MPC)
+
+The course content in this repository is licensed under the Creative Commons
+Attribution 4.0 International License. This covers lesson text, explanations,
+figures, checkpoint descriptions and the website, that is, the markdown cells of
+the notebooks and all .md and .qmd files.
+
+Code (code cells of the notebooks, and all files in utils/, tests/, tools/ and
+data/) is licensed separately under the MIT License; see LICENSE.
+
+Datasets, videos and other third-party material linked from the lessons are not
+covered by either licence and keep their own terms, which each lesson lists.
+
+You are free to:
+
+  Share - copy and redistribute the material in any medium or format for any
+          purpose, even commercially.
+  Adapt - remix, transform, and build upon the material for any purpose, even
+          commercially.
+
+Under the following terms:
+
+  Attribution - You must give appropriate credit, provide a link to the
+                license, and indicate if changes were made. You may do so in
+                any reasonable manner, but not in any way that suggests the
+                licensor endorses you or your use.
+
+  No additional restrictions - You may not apply legal terms or technological
+                measures that legally restrict others from doing anything the
+                license permits.
+
+Suggested attribution:
+
+  "Marmara Computational Pathology Starter Pack" by the Marmara Pathology
+  Community (MPC), licensed under CC BY 4.0.
+
+This is a human-readable summary. The full legal code, which is the binding
+licence text, is at:
+
+  https://creativecommons.org/licenses/by/4.0/legalcode

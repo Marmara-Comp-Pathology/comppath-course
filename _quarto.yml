@@ -1,0 +1,119 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - getting-started.qmd
+    - about.qmd
+    - lessons/*/lesson.ipynb
+    - lessons/*/checkpoint.md
+
+# Notebooks are committed with outputs cleared and are never executed when the site is built.
+# The site shows the lessons to read; learners run them on Kaggle or Colab.
+execute:
+  enabled: false
+
+website:
+  title: "Marmara Computational Pathology Starter Pack"
+  description: "From Zero to Hero. A free, open course in digital and computational pathology for pathology residents."
+  site-url: https://marmara-comp-pathology.github.io/comppath-course
+  repo-url: https://github.com/Marmara-Comp-Pathology/comppath-course
+  repo-actions: [edit, issue]
+  page-navigation: true
+  search: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: getting-started.qmd
+        text: Getting started
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/Marmara-Comp-Pathology/comppath-course
+        aria-label: GitHub repository
+  sidebar:
+    style: docked
+    contents:
+      - href: getting-started.qmd
+        text: Getting started
+      - section: "1. Your first model"
+        contents:
+          - text: "Lesson"
+            href: lessons/01-first-model/lesson.ipynb
+          - text: "Checkpoint"
+            href: lessons/01-first-model/checkpoint.md
+      - section: "2. Inside a digital slide"
+        contents:
+          - text: "Lesson"
+            href: lessons/02-inside-a-slide/lesson.ipynb
+          - text: "Checkpoint"
+            href: lessons/02-inside-a-slide/checkpoint.md
+      - section: "3. Just enough Python"
+        contents:
+          - text: "Lesson"
+            href: lessons/03-just-enough-python/lesson.ipynb
+          - text: "Checkpoint"
+            href: lessons/03-just-enough-python/checkpoint.md
+      - section: "4. Tiling a slide"
+        contents:
+          - text: "Lesson"
+            href: lessons/04-tiling-a-slide/lesson.ipynb
+          - text: "Checkpoint"
+            href: lessons/04-tiling-a-slide/checkpoint.md
+      - section: "5. Data done right"
+        contents:
+          - text: "Lesson"
+            href: lessons/05-data-done-right/lesson.ipynb
+          - text: "Checkpoint ✅"
+            href: lessons/05-data-done-right/checkpoint.md
+      - section: "6. Stain variation and augmentation"
+        contents:
+          - text: "Lesson"
+            href: lessons/06-stain-and-augmentation/lesson.ipynb
+          - text: "Checkpoint"
+            href: lessons/06-stain-and-augmentation/checkpoint.md
+      - section: "7. Segmentation"
+        contents:
+          - text: "Lesson"
+            href: lessons/07-segmentation/lesson.ipynb
+          - text: "Checkpoint"
+            href: lessons/07-segmentation/checkpoint.md
+      - section: "8. Foundation models"
+        contents:
+          - text: "Lesson"
+            href: lessons/08-foundation-models/lesson.ipynb
+          - text: "Checkpoint"
+            href: lessons/08-foundation-models/checkpoint.md
+      - section: "9. Slide-level prediction"
+        contents:
+          - text: "Lesson"
+            href: lessons/09-slide-level-prediction/lesson.ipynb
+          - text: "Checkpoint ✅"
+            href: lessons/09-slide-level-prediction/checkpoint.md
+      - section: "10. Trust"
+        contents:
+          - text: "Lesson"
+            href: lessons/10-trust/lesson.ipynb
+          - text: "Checkpoint"
+            href: lessons/10-trust/checkpoint.md
+      - section: "11. Capstone"
+        contents:
+          - text: "Lesson"
+            href: lessons/11-capstone/lesson.ipynb
+          - text: "Checkpoint ✅"
+            href: lessons/11-capstone/checkpoint.md
+  page-footer:
+    left: "Text CC BY 4.0 · Code MIT"
+    right: "Marmara Pathology Community · An independent, voluntary project · Not an official course of any institution"
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    toc: true
+    code-copy: true
+    code-overflow: wrap

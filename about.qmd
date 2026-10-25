@@ -1,0 +1,35 @@
+---
+title: "About"
+---
+
+This course is made by the **Marmara Pathology Community (MPC)**, a group of pathologists who volunteer their time to teach
+computational pathology to residents. Anyone, anywhere, is welcome to use it.
+
+## Disclaimer
+
+- This is an **independent, voluntary project**. The Marmara Pathology Community is an informal group, not a legal entity.
+- It is **not an official course** of any university, hospital, faculty or professional society, and it is **not endorsed** by any of them.
+  Taking it does not lead to any official certificate or credit.
+- The course is for **education only**. Nothing in it is medical advice, and no model built in it is fit for diagnosis or any use on patients.
+- Contributors write in a personal capacity. Their views are not those of their employers.
+
+## Licence
+
+- Lesson text and figures: [Creative Commons Attribution 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+- Code: [MIT](https://opensource.org/license/mit)
+- Datasets keep their own licences, listed in each lesson.
+
+You are welcome to reuse, translate and adapt the course. Please credit it and link back.
+
+## Citing the course
+
+Each yearly release (v2026, v2027, ...) is archived on Zenodo with its own DOI. See `CITATION.cff` in the repository.
+
+## Contributing
+
+Corrections, new examples and translations are welcome. See `CONTRIBUTING.md` in the repository.
+
+## Acknowledgements
+
+The teaching approach follows fast.ai's [Practical Deep Learning for Coders](https://course.fast.ai) by Jeremy Howard and Rachel Thomas.
+Lessons link public videos by their original authors; the course does not host recorded talks of its own.

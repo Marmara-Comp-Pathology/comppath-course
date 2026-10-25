@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Quarto
+/_site/
+/.quarto/
+/_freeze/
+
+# Lesson outputs when running locally
+work/
+*.pkl
+*.pth
+
+# Never commit slides or patient data (see CONTRIBUTING.md, "Privacy")
+*.svs
+*.ndpi
+*.mrxs
+*.scn
+*.vms
+*.vmu
+*.bif
+*.czi
+*.isyntax
+*.dcm
+data/raw/
+data/private/
+test-report.md
+
+# Local project notes for Claude Code sessions; kept out of the public repository
+CLAUDE.md
