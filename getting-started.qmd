@@ -18,19 +18,19 @@ You need about 20 minutes and a phone for this, once.
 Every lesson starts with two badges:
 
 - **Open in Kaggle** makes your own copy of the lesson notebook on Kaggle. Use this one.
-- **Open in Colab** opens it on Google Colab instead. Use this if Kaggle is unavailable or its free tier changes.
+- **Open in Colab** opens it on Google Colab instead. Use this if Kaggle is unavailable for some reason.
 
 Each lesson tells you at the top whether it needs a GPU and which data to attach.
 
 ## 3. Run a notebook
 
-A notebook is a page made of **cells**. Text cells explain; code cells do something.
+A notebook is a page made of **cells**. Text cells explain; code cells do something. (For more info about what is a notebook:)
 
 - Click inside a code cell and press **Shift+Enter** to run it. The next cell is selected automatically.
 - A running cell shows `[*]`; when it finishes, the star turns into a number.
 - Always run cells **from top to bottom**. Later cells use what earlier cells created.
 - If something gets stuck: **Run → Restart & clear outputs** (Kaggle) or **Runtime → Restart session** (Colab), then start again from the top.
-- Your copy is yours. You cannot break the course by changing it.
+- Your copy is yours. You cannot break the course by changing it :).
 
 ## 4. Save and share
 
