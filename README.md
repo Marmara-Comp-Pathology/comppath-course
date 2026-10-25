@@ -2,8 +2,8 @@
 
 *From Zero to Hero*
 
-A free, open course in digital and computational pathology for pathology residents
-with no coding background, inspired by fast.ai's *Practical Deep Learning for Coders*.
+A free, open course in digital and computational pathology for pathologists
+with no coding background.
 
 Made by the Marmara Pathology Community.
 
