@@ -7,7 +7,7 @@ toc: false
 A free, open course for pathologists. No coding experience needed.
 
 
-You will train your first deep learning model on histology in **lesson 1**, before learning any code.
+You will train your first deep learning model on histopathology in **lesson 1**, before learning any code.
 Each later lesson opens one of the boxes you used without explanation, until you can run a project of your own
 on your department's slides and present it anywhere you want.
 
