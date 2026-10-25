@@ -115,5 +115,6 @@ format:
       dark: [cosmo, theme-dark.scss]    # black and MPC blue (same base theme, so sizes match)
     css: styles.css
     toc: true
+    link-external-newwindow: true   # links to other websites open in a new tab
     code-copy: true
     code-overflow: wrap
